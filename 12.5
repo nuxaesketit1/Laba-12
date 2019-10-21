@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+double Fact2(int N) {
+	int temp = 1;
+	for (; N > 0; N -= 2) temp *= N;
+	return temp;
+};
+
+int main() {
+
+	setlocale(0, "");
+
+	int N;
+
+	cout << "Введите число для вычисления двойного факториала : " << endl;
+	cin >> N;
+
+	cout << "Факториал равен : " << Fact2(N) << endl;
+
+	cout << endl;
+
+	system("pause");
+
+	return 0;
+
+}
