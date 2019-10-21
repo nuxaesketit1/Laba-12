@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+double RingS(double r1, double r2) {
+	return 3.14* (pow(r1, 2) - pow(r2, 2));
+}
+
+int main() {
+
+	setlocale(0, "");
+
+	double r1, r2;
+
+	do {
+
+		cout << "Введите радиусы окружностей : " << endl;
+		cin >> r1 >> r2;
+
+		if ((r1 > r2) & (r1 > 0) & (r2 > 0)) {
+
+			cout << "Площадь кольца : " << RingS(r1, r2) << endl;
+			break;
+
+		}
+		else {
+			cout << "Повторите ввод радиусов.. " << endl;
+		}
+
+	} while (true);
+
+	cout << endl;
+
+	system("pause");
+
+	return 0;
+
+}
