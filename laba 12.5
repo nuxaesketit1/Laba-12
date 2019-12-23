@@ -1,18 +1,31 @@
 #include <iostream>
 using namespace std;
-double Fact2 ( int N) {
-	int f=1;
-	if (N%2==0) {
-		for (int i=2; i<=N; i+=2) {f*=i;}
+float Fact2(int n)
+{
+    float b=1;
+    if (n%2==0)
+    {
+        while (n>0)
+        {
+            b=b*n;
+            n-=2;
+        }
+    }
+    else 
+    {
+        while (n>0)
+        {
+            b=b*n;
+            n-=2;
+        }
+    }
+    return b;
 }
-else { 
-for (int i=1; i<=N; i+=2) {f*=i;}
-}
-return f;
-}
-int main() {
-	int N;
-	cout << "N:" ; cin>> N;
-	cout << "N!! : " << Fact2(N);
-	return 0;
+int main()
+{
+    int x;
+    cout<<"Vvedite chislo"<<endl;
+    cin>>x;
+    cout<<Fact2(x);
+    return 0;
 }
